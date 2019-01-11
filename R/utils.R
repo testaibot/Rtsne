@@ -39,7 +39,7 @@ is.wholenumber <- function(x, tol = .Machine$double.eps^0.5)
 # Checks parameters for the t-SNE algorithm that are independent of
 # the format of the input data (e.g., distance matrix or neighbors).
 {
-    if (!is.wholenumber(dims) || dims < 1 || dims > 3) { stop("dims should be either 1, 2 or 3") }
+    #if (!is.wholenumber(dims) || dims < 1 || dims > 3) { stop("dims should be either 1, 2 or 3") }
     if (!is.wholenumber(max_iter) || !(max_iter>0)) { stop("number of iterations should be a positive integer")}
     if (!is.null(Y_init) && (nsamples!=nrow(Y_init) || ncol(Y_init)!=dims)) { stop("incorrect format for Y_init") }
 
